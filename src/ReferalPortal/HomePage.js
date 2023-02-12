@@ -6,6 +6,7 @@ import EmpList from "./EmployeeList";
 function HomePage() {
   const Candidates = [
     {
+      id:1,
       name: "Lakee",
       picture_url: "lakee.jpg",
       profile: "React Developer",
@@ -23,6 +24,7 @@ function HomePage() {
 
     },
     {
+      id:2,
       name: "Aman",
       picture_url: "lakee.jpg",
       profile: "Nodejs Developer",
@@ -39,6 +41,7 @@ function HomePage() {
       JoinedDate:'',
     },
     {
+      id:3,
       name: "Abhishek  Tiwari",
       picture_url: "lakee.jpg",
       profile: "Dotnet Developer",
@@ -55,6 +58,7 @@ function HomePage() {
       JoinedDate:'',
     },
     {
+      id:4,
       name: "Shubham Keshri",
       picture_url: "lakee.jpg",
       profile: "Angular Developer",
@@ -71,6 +75,8 @@ function HomePage() {
       JoinedDate:'22 july 2010',
     },
     {
+      
+      id:5,
       name: "Surya Srivastava",
       picture_url: "lakee.jpg",
       profile: "MEARN Developer",
@@ -87,6 +93,7 @@ function HomePage() {
       JoinedDate:'',
     },
     {
+      id:6,
       name: "Ajay Kumar",
       picture_url: "lakee.jpg",
       profile: "React Native Developer",
@@ -103,6 +110,7 @@ function HomePage() {
       JoinedDate:'1 march 2012',
     },
     {
+      id:7,
       name: "Hirdesh Malviaya",
       picture_url: "lakee.jpg",
       profile: "Frontend Developer",
@@ -119,6 +127,7 @@ function HomePage() {
       JoinedDate:'',
     },
     {
+      id:8,
       name: "Harsh Kumar",
       picture_url: "lakee.jpg",
       profile: "Flutter Developer",
@@ -168,14 +177,20 @@ function HomePage() {
             </div>
           </div>
           <div className="displayMultipleList">
-            {Candidates.filter((val) => {
+            {Candidates?.filter((val) => {
               if (searchTerm === "") {
                 return val;
-              } else if (
-                val.name.toLowerCase().includes(searchTerm.toLowerCase())
-              ) {
-                return val;
+              } else {
+                if (
+                  val.name.toLowerCase().includes(searchTerm.toLowerCase())
+                ) {
+                  return val;
+                } else{
+                  return null;
+                }
               }
+              
+              
             }).map((val, i) => {
               return (
                 <div className="empListDiv" key={i}>
