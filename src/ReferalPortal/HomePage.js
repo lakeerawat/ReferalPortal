@@ -8,7 +8,6 @@ function HomePage() {
     {
       id:1,
       name: "Lakee",
-      picture_url: "lakee.jpg",
       profile: "React Developer",
       Referred: true,
       Interviewed: true,
@@ -26,14 +25,13 @@ function HomePage() {
     {
       id:2,
       name: "Aman",
-      picture_url: "lakee.jpg",
       profile: "Nodejs Developer",
       Referred: false,
       Interviewed: false,
       Hired: false,
       Joined: false,
       dayleft: "",
-      status: "",
+      status: "rejected",
       Reward: "$200",
       ReferredDate:'',
       InterviewedDate:'',
@@ -43,7 +41,6 @@ function HomePage() {
     {
       id:3,
       name: "Abhishek  Tiwari",
-      picture_url: "lakee.jpg",
       profile: "Dotnet Developer",
       Referred: true,
       Interviewed: true,
@@ -60,7 +57,6 @@ function HomePage() {
     {
       id:4,
       name: "Shubham Keshri",
-      picture_url: "lakee.jpg",
       profile: "Angular Developer",
       Referred: true,
       Interviewed: true,
@@ -78,7 +74,6 @@ function HomePage() {
       
       id:5,
       name: "Surya Srivastava",
-      picture_url: "lakee.jpg",
       profile: "MEARN Developer",
       Referred: true,
       Interviewed: true,
@@ -95,7 +90,6 @@ function HomePage() {
     {
       id:6,
       name: "Ajay Kumar",
-      picture_url: "lakee.jpg",
       profile: "React Native Developer",
       Referred: true,
       Interviewed: true,
@@ -112,7 +106,6 @@ function HomePage() {
     {
       id:7,
       name: "Hirdesh Malviaya",
-      picture_url: "lakee.jpg",
       profile: "Frontend Developer",
       Referred: true,
       Interviewed: true,
@@ -129,7 +122,6 @@ function HomePage() {
     {
       id:8,
       name: "Harsh Kumar",
-      picture_url: "lakee.jpg",
       profile: "Flutter Developer",
       Referred: true,
       Interviewed: true,
@@ -197,7 +189,7 @@ function HomePage() {
                   <div className="displayPhoneview">
                     <EmpList props={val} />
                   </div>
-                  <div className="displayDesktop">
+                  <div className={`${val.id%2 === 0 ? "displayDesktop" : "displayDesktop2"}`}>
                     <div className="empDiv1">
                       <div className="ImageDiv">
                         <FcBusinessman size={50} />
@@ -221,7 +213,7 @@ function HomePage() {
                           </span>
                         </div>
                       )}
-                      <div className="hLine"></div>
+                      <div className={`${val.status === "rejected" ? "hLine2" : "hLine"}`}></div>
                       {val.status === "interviewed" ? (
                         <div className="spanDiv">
                           <div className="ImageDiv2">
@@ -237,7 +229,7 @@ function HomePage() {
                           </span>
                         </div>
                       )}
-                      <div className="hLine"></div>
+                      <div className={`${val.status === "rejected" ? "hLine2" : "hLine"}`}></div>
 
                       {val.status === "hired" ? (
                         <div className="spanDiv">
@@ -252,7 +244,7 @@ function HomePage() {
                           </span>
                         </div>
                       )}
-                      <div className="hLine"></div>
+                      <div className={`${val.status === "rejected" ? "hLine2" : "hLine"}`}></div>
 
                       {val.status === "joined" || val.status === "reward" ? (
                         <div className="spanDiv">
@@ -268,7 +260,7 @@ function HomePage() {
                         </div>
                       )}
                       {val.status === "reward" ? (
-                        <div className="hLine"></div>
+                        <div className={`${val.status === "rejected" ? "hLine2" : "hLineLastDiv"}`}></div>
                       ) : val.Joined ? (
                         <div className="hLineMainDiv">
                         <div className="hLine2Div">

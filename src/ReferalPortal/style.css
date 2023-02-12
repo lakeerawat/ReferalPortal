@@ -28,7 +28,7 @@
   height: 100%;
   flex-direction: column;
   box-sizing: border-box;
-  padding: 2rem;
+  padding: 1rem;
   top: 10rem;
   background-color: whitesmoke;
   border-radius: 1rem;
@@ -115,13 +115,12 @@
   border-radius: 50%;
   display: inline-block;
 }
+
 .empListDiv {
-  display: flex;
-  position: relative;
-  align-items: center;
+  /* align-items: center;
   height: max-content;
   box-sizing: border-box;
-  background: ghostwhite;
+  background: ghostwhite; */
   margin-bottom: 1rem;
   border-radius: 10px;
   padding: 1rem;
@@ -132,11 +131,21 @@
     align-items: center;
     height: max-content;
     box-sizing: border-box;
-    background: ghostwhite;
-    margin-bottom: 1rem;
+    background: white;
+    padding: 1rem;
     width: 100%;
     border-radius: 10px;
+  }
+  .displayDesktop2{
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: max-content;
+    box-sizing: border-box;
+    background: ghostwhite;
     padding: 1rem;
+    width: 100%;
+    border-radius: 10px;
   }
 .ListNavDiv1 {
   display: flex;
@@ -179,7 +188,7 @@
 .ImageDiv2 {
   justify-content: center;
   display: flex;
-  width: 2rem;
+  width: 2.5rem;
   border-radius: 50%;
   align-items: center;
   background: beige;
@@ -226,6 +235,11 @@
     height: 0.3rem;
     background-color: #1fd011d9;
   }
+  .hLine2 {
+    width: 19%;
+    height: 0.3rem;
+    background-color: gray;
+  }
   .hLineMainDiv{
     display: flex;
     align-items: center;
@@ -238,7 +252,7 @@
     align-items: center;
   }
   .hLine2Div>.greenLine{
-    width: 80%;
+    width: 100%;
     height: 0.3rem;
     background-color: #1fd011d9;
   }
@@ -249,7 +263,7 @@ margin-bottom: 5px;
 font-weight: 500;
   }
   .hLine2Div>.greyDotted{
-    width: 6rem;
+    width: 4.8rem;
     height: 0.3rem;
     margin-top: 0.2rem;
     border-top: dashed 6px grey;
@@ -261,6 +275,11 @@ font-weight: 500;
     margin-top: 0.2rem;
     border-top: dashed 6px grey;
   }
+  .hLineLastDiv{
+    width: 12%;
+    height: 0.3rem;
+    background-color: #1fd011d9;
+  }
   @media (min-width: 992px) {
     .LowerDiv{
         z-index: 1;
@@ -269,6 +288,13 @@ font-weight: 500;
         margin: -60px auto 0px;
     }
 }
+@media (max-width:992px){
+.insideUpperDiv {
+  padding-right: 27rem;
+  max-width: 992px;
+  margin: auto;
+}
+}
 @media (max-width: 767px) {
   .UpperDiv {
     height: fit-content;
@@ -276,6 +302,7 @@ font-weight: 500;
     .insideUpperDiv {
         padding-right: 0rem; 
          margin: 0;
+         padding-left: 1rem;
     }
     .displayPhoneview{
         display: block;
@@ -283,10 +310,17 @@ font-weight: 500;
     .displayDesktop{
         display: none;
     }
+    .displayDesktop2{
+      display: none;
+  }
   .empListDiv {
     flex-direction: column;
-padding-top: 1rem;
-padding-bottom: 1rem;  }
+height: max-content;
+box-sizing: border-box;
+background: ghostwhite;
+margin-bottom: 1rem;
+border-radius: 10px;
+padding: 1rem; }
 .displayPhoneview {
     flex-direction: column;
 padding-top: 1rem;
@@ -307,7 +341,7 @@ padding-bottom: 1rem;  }
   }
   .empDiv2 {
     display: flex;
-    padding-left: 4rem;
+    padding-left: 4.7rem;
     justify-content: space-between;
     flex-direction: column;
     width: 75%;
@@ -324,7 +358,7 @@ padding-bottom: 1rem;  }
     width: 5px;
     height: 5rem;
     background-color: #1fd011d9;
-    margin-left: 5rem;
+    margin-left: 5.7rem;
   }
   .VDashedLine{
     height: 5rem;
