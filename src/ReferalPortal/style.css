@@ -1,0 +1,436 @@
+.MainDiv {
+  display: flex;
+  height: 100%;
+  box-sizing: border-box;
+  flex-direction: column;
+  max-width: 1520px;
+  margin: auto;
+}
+
+.UpperDiv {
+  display: flex;
+  width: 100%;
+  position: relative;
+  background-color: #1fd011d9;
+  flex-direction: column;
+  color: white;
+  height: 20rem;
+}
+.insideUpperDiv{
+    padding-right: 40rem;
+    max-width: 992px;
+    margin: auto;
+
+}
+.LowerDiv {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 2rem;
+  top: 10rem;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+}
+.displayMultipleList {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.SearchBar > input {
+    width: 20rem;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-family: revert;
+    border-radius: 0.5rem;
+    border: none;
+    padding-left: 1rem;
+    color: black;
+}
+.ListNav {
+  display: flex;
+  width: 100%;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+  height: max-content;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.ListNavDiv1 > span {
+  color: cadetblue;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.stageReward {
+  color: #1fd011d9;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.stageReward2 {
+  color: rgb(172, 164, 164);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.stageReward3 {
+    color: black;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+  }
+
+.ListNavDiv2 > span {
+  color: cadetblue;
+  font-size: 1.5rem;
+  display: flex;
+  font-weight: 500;
+  justify-content: center;
+  width: 16%;
+}
+.greenhr {
+  height: 2px;
+  border-width: 0rem;
+  color: gray;
+  background-color: gray;
+}
+
+.dot {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    background-color: #1fd011d9;
+    border-radius: 50%;
+    color: white;
+    font-size: 2rem;
+}
+.dot2 {
+  height: 35px;
+  width: 35px;
+  border: 4px solid gray;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+}
+.empListDiv {
+  display: flex;
+  position: relative;
+  align-items: center;
+  height: max-content;
+  box-sizing: border-box;
+  background: ghostwhite;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.displayDesktop{
+    display: flex;
+    position: relative;
+    align-items: center;
+    height: max-content;
+    box-sizing: border-box;
+    background: ghostwhite;
+    margin-bottom: 1rem;
+    width: 100%;
+    border-radius: 10px;
+    padding: 1rem;
+  }
+.ListNavDiv1 {
+  display: flex;
+  width: 20%;
+  position: relative;
+  padding-left: 1rem;
+  box-sizing: border-box;
+}
+.ListNavDiv2 {
+  display: flex;
+  width: 80%;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  height: max-content;
+}
+.empDiv1 {
+  display: flex;
+  width: 20%;
+  position: relative;
+  justify-content: space-evenly;
+  align-items: center;
+  height: max-content;
+}
+.ImageDiv {
+  justify-content: center;
+  display: flex;
+  width: 4rem;
+  border-radius: 50%;
+  align-items: center;
+  background: beige;
+  height: 4rem;
+  overflow: hidden;
+}
+.daysDiv{
+    color: gray;
+    font-size: 1rem;
+    font-family: ui-monospace;
+}
+.ImageDiv2 {
+  justify-content: center;
+  display: flex;
+  width: 2rem;
+  border-radius: 50%;
+  align-items: center;
+  background: beige;
+  height: 2.5rem;
+  border: 4px solid #1fd011d9;
+  overflow: hidden;
+}
+.NameAndProfileDiv {
+  display: flex;
+  width: 10rem;
+  flex-direction: column;
+}
+.nameSpan {
+  display: flex;
+  font-size: 0.9rem;
+  font-family: cursive;
+  font-weight: 500;
+}
+.profileNameSpan {
+  display: flex;
+  font-size: 0.9rem;
+  color: gray;
+  font-weight: 400;
+  font-family: cursive;
+}
+.empDiv2 {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  padding-left: 2rem;
+  height: max-content;
+}
+.empDiv2>.spanDiv {
+    display: flex;
+    align-items: center;
+  }
+   .displayPhoneview{
+    display: none;
+}
+.hLine {
+    width: 19%;
+    height: 0.3rem;
+    background-color: #1fd011d9;
+  }
+  .hLineMainDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 22px;
+    flex-direction: column;
+  }
+  .hLine2Div{
+    display: flex;
+    align-items: center;
+  }
+  .hLine2Div>.greenLine{
+    width: 80%;
+    height: 0.3rem;
+    background-color: #1fd011d9;
+  }
+  .hLine2Div>span{
+font-size: 2rem;
+color: #1fd011d9;
+margin-bottom: 5px;
+font-weight: 500;
+  }
+  .hLine2Div>.greyDotted{
+    width: 6rem;
+    height: 0.3rem;
+    margin-top: 0.2rem;
+    border-top: dashed 6px grey;
+  }
+  .hDottedLine
+  {
+    width: 7.5rem;
+    height: 0.3rem;
+    margin-top: 0.2rem;
+    border-top: dashed 6px grey;
+  }
+  @media (min-width: 992px) {
+    .LowerDiv{
+        z-index: 1;
+        background-color: white;
+        max-width: 992px;
+        margin: -60px auto 0px;
+    }
+}
+@media (max-width: 767px) {
+    .insideUpperDiv {
+        padding-right: 0rem; 
+         margin: 0;
+    }
+    .displayPhoneview{
+        display: block;
+    }
+    .displayDesktop{
+        display: none;
+    }
+  .empListDiv {
+    flex-direction: column;
+padding-top: 1rem;
+padding-bottom: 1rem;  }
+.displayPhoneview {
+    flex-direction: column;
+padding-top: 1rem;
+padding-bottom: 1rem;  }
+  .empDiv1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .stageReward3 {
+    color: rgb(172, 164, 164);
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .MainDiv {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .empDiv2 {
+    display: flex;
+    padding-left: 4rem;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 75%;
+    align-items: flex-start;
+  }
+  .vLine {
+    width: 5px;
+    height: 5rem;
+    background-color: #1fd011d9;
+    margin-left: 1rem;
+    margin-top: 0.3rem;
+  }
+  .vLine2 {
+    width: 5px;
+    height: 5rem;
+    background-color: #1fd011d9;
+    margin-left: 5rem;
+  }
+  .VDashedLine{
+    height: 5rem;
+    margin-left: 1rem;
+    margin-top: 0.3rem;
+    border-left:dashed 6px  grey;
+  }
+  .Dollar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .Dollar>.dollarSpan{
+    display: flex;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #1fd011d9;
+    margin-left: 0.5rem;
+  }
+  .Dollar>.dateSpan{
+    display: flex;
+    font-size: 1rem;
+    font-weight: 400;
+    color: grey;
+    margin-left: 0.5rem;
+  }
+  .hideDollar{
+    display: none;
+  }
+  .stageDiv1 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 2rem;
+    align-items: center;
+  }
+  .stagePara{
+    color: #4d4a4a;
+    font-size: 1rem;
+    font-weight: 500;
+    padding-left: 0.5rem;
+    font-family: serif;
+  }
+  .stageDate{
+    color: grey;
+    font-size: 1rem;
+    font-weight: 400;
+    padding-left: 0.3rem;
+    font-family: ui-rounded;
+  }
+  .dot {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 40px;
+    width: 40px;
+    background-color: #1fd011d9;
+    border-radius: 50%;
+    color: white;
+    font-size: 2rem;
+  }
+  .dot2 {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 33px;
+    width: 33px;
+    border-radius: 50%;
+    color: white;
+    font-size: 2rem;
+  }
+  .ImageDiv2 {
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+  .EmployeeList{
+    width: 100%;
+  }
+  .LowerDiv {
+    padding: 0;
+  }
+  .ListNav {
+    display: none;
+  }
+  .stageReward2 {
+    color: black;
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+  .stageReward3 {
+      color: rgb(172, 164, 164);
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+  .displayMultipleList {
+    display: flex;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+  }
+  .DetailDivShow{
+    display: block;
+  }
+  .DetailDivHide{
+    display: none;
+  }
+  .statusDiv{
+    display: flex;
+    width: 12rem;
+    align-items: center;
+  }
+}
