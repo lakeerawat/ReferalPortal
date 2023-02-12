@@ -270,6 +270,9 @@ font-weight: 500;
     }
 }
 @media (max-width: 767px) {
+  .UpperDiv {
+    height: fit-content;
+  }
     .insideUpperDiv {
         padding-right: 0rem; 
          margin: 0;
