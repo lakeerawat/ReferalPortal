@@ -1,5 +1,4 @@
 import "./style.css";
-import { FcBusinessman } from "react-icons/fc";
 import React, { useState } from "react";
 import EmpList from "./EmployeeList";
 import EmpListDesktop from "./EmpListDesktop";
