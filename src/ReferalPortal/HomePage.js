@@ -2,6 +2,7 @@ import "./style.css";
 import { FcBusinessman } from "react-icons/fc";
 import React, { useState } from "react";
 import EmpList from "./EmployeeList";
+import EmpListDesktop from "./EmpListDesktop";
 
 function HomePage() {
   const Candidates = [
@@ -9,6 +10,14 @@ function HomePage() {
       id:1,
       name: "Lakee",
       profile: "React Developer",
+      stage:[
+        {stageName:"Referred",stageStatus:true, date:"20 july 2010"},
+      {stageName:"Interviewed",stageStatus:true, date:"22 july 2010"},
+      {stageName:"Hired",stageStatus:true, date:"25 july 2010"},
+      {stageName:"proccess1",stageStatus:true, date:"25 july 2010"},
+      {stageName:"processs2",stageStatus:true, date:"25 july 2010"},
+      {stageName:"joined",stageStatus:true, date:"01 Aug 2010"},
+    ],
       Referred: true,
       Interviewed: true,
       Hired: true,
@@ -26,6 +35,9 @@ function HomePage() {
       id:2,
       name: "Aman",
       profile: "Nodejs Developer",
+      stage:[
+        {stageName:"Referred",stageStatus:false, date:""},
+    ],
       Referred: false,
       Interviewed: false,
       Hired: false,
@@ -42,6 +54,12 @@ function HomePage() {
       id:3,
       name: "Abhishek  Tiwari",
       profile: "Dotnet Developer",
+      stage:[
+        {stageName:"Referred",stageStatus:true, date:"20 july 2010"},
+      {stageName:"Interviewed",stageStatus:true, date:"22 july 2010"},
+      {stageName:"Hired",stageStatus:false, date:""},
+      {stageName:"joined",stageStatus:false, date:""},
+    ],
       Referred: true,
       Interviewed: true,
       Hired: false,
@@ -58,6 +76,12 @@ function HomePage() {
       id:4,
       name: "Shubham Keshri",
       profile: "Angular Developer",
+      stage:[
+        {stageName:"Referred",stageStatus:true, date:"20 july 2010"},
+      {stageName:"Interviewed",stageStatus:true, date:"22 july 2010"},
+      {stageName:"Hired",stageStatus:true, date:"25 july 2010"},
+      {stageName:"joined",stageStatus:true, date:"01 Aug 2010"},
+    ],
       Referred: true,
       Interviewed: true,
       Hired: true,
@@ -75,6 +99,12 @@ function HomePage() {
       id:5,
       name: "Surya Srivastava",
       profile: "MEARN Developer",
+      stage:[
+        {stageName:"Referred",stageStatus:true, date:"20 july 2010"},
+      {stageName:"Interviewed",stageStatus:true, date:"22 july 2010"},
+      {stageName:"Hired",stageStatus:true, date:"25 july 2010"},
+      {stageName:"joined",stageStatus:false, date:""},
+    ],
       Referred: true,
       Interviewed: true,
       Hired: true,
@@ -91,6 +121,12 @@ function HomePage() {
       id:6,
       name: "Ajay Kumar",
       profile: "React Native Developer",
+      stage:[
+        {stageName:"Referred",stageStatus:true, date:"20 july 2010"},
+      {stageName:"Interviewed",stageStatus:true, date:"22 july 2010"},
+      {stageName:"Hired",stageStatus:true, date:"25 july 2010"},
+      {stageName:"joined",stageStatus:true, date:"01 Aug 2010"},
+    ],
       Referred: true,
       Interviewed: true,
       Hired: true,
@@ -107,6 +143,12 @@ function HomePage() {
       id:7,
       name: "Hirdesh Malviaya",
       profile: "Frontend Developer",
+      stage:[
+        {stageName:"Referred",stageStatus:true, date:"20 july 2010"},
+      {stageName:"Interviewed",stageStatus:true, date:"22 july 2010"},
+      {stageName:"Hired",stageStatus:false, date:""},
+      {stageName:"joined",stageStatus:false, date:""},
+    ],
       Referred: true,
       Interviewed: true,
       Hired: false,
@@ -123,6 +165,12 @@ function HomePage() {
       id:8,
       name: "Harsh Kumar",
       profile: "Flutter Developer",
+      stage:[
+        {stageName:"Referred",stageStatus:true, date:"20 dec 2022"},
+      {stageName:"Interviewed",stageStatus:true, date:"22 dec 2022"},
+      {stageName:"Hired",stageStatus:true, date:"30 dec 2022"},
+      {stageName:"joined",stageStatus:true, date:"10 jan 2023"},
+    ],
       Referred: true,
       Interviewed: true,
       Hired: true,
@@ -152,7 +200,7 @@ function HomePage() {
                 onChange={(event) => setSearchTerm(event.target.value)}
               />
               <p>Searching for: {searchTerm}</p>
-            </div>{" "}
+            </div>
           </div>
         </div>
         <div className="LowerDiv">
@@ -189,106 +237,7 @@ function HomePage() {
                   <div className="displayPhoneview">
                     <EmpList props={val} />
                   </div>
-                  <div className={`${val.id%2 === 0 ? "displayDesktop" : "displayDesktop2"}`}>
-                    <div className="empDiv1">
-                      <div className="ImageDiv">
-                        <FcBusinessman size={50} />
-                      </div>
-                      <div className="NameAndProfileDiv">
-                        <span className="nameSpan">{val.name}</span>
-                        <span className="profileNameSpan">{val.profile}</span>
-                      </div>
-                    </div>
-                    <div className="empDiv2">
-                      {val.status === "referred" ? (
-                        <div className="spanDiv">
-                          <div className="ImageDiv2">
-                            <FcBusinessman size={30} />
-                          </div>
-                        </div>
-                      ) : (
-                        <div className="spanDiv">
-                          <span className={`${val.Referred ? "dot" : "dot2"}`}>
-                            {val.Referred ? <span>✓</span> : null}
-                          </span>
-                        </div>
-                      )}
-                      <div className={`${val.status === "rejected" ? "hLine2" : "hLine"}`}></div>
-                      {val.status === "interviewed" ? (
-                        <div className="spanDiv">
-                          <div className="ImageDiv2">
-                            <FcBusinessman size={30} />
-                          </div>
-                        </div>
-                      ) : (
-                        <div className="spanDiv">
-                          <span
-                            className={`${val.Interviewed ? "dot" : "dot2"}`}
-                          >
-                            {val.Interviewed ? <span>✓</span> : null}
-                          </span>
-                        </div>
-                      )}
-                      <div className={`${val.status === "rejected" ? "hLine2" : "hLine"}`}></div>
-
-                      {val.status === "hired" ? (
-                        <div className="spanDiv">
-                          <div className="ImageDiv2">
-                            <FcBusinessman size={30} />
-                          </div>
-                        </div>
-                      ) : (
-                        <div className="spanDiv">
-                          <span className={`${val.Hired ? "dot" : "dot2"}`}>
-                            {val.Hired ? <span>✓</span> : null}
-                          </span>
-                        </div>
-                      )}
-                      <div className={`${val.status === "rejected" ? "hLine2" : "hLine"}`}></div>
-
-                      {val.status === "joined" || val.status === "reward" ? (
-                        <div className="spanDiv">
-                          <div className="ImageDiv2">
-                            <FcBusinessman size={30} />
-                          </div>
-                        </div>
-                      ) : (
-                        <div className="spanDiv">
-                          <span className={`${val.Joined ? "dot" : "dot2"}`}>
-                            {val.Joined ? <span>✓</span> : null}
-                          </span>
-                        </div>
-                      )}
-                      {val.status === "reward" ? (
-                        <div className={`${val.status === "rejected" ? "hLine2" : "hLineLastDiv"}`}></div>
-                      ) : val.Joined ? (
-                        <div className="hLineMainDiv">
-                        <div className="hLine2Div">
-                          <div className="greenLine"></div> <span>$</span>
-                          <div className="greyDotted"></div>
-                            </div>
-                            <div className="daysDiv">
-                            20 days to go
-                            </div>
-                        </div>
-                      ) : (
-                        <div className="hDottedLine"></div>
-                      )}
-
-                      <div className="spanDiv">
-                        <div
-                          className={`${
-                            val.status === "reward"
-                              ? "stageReward"
-                              : val.status === "joined" ?"stageReward3"
-                              : "stageReward2"
-                          }`}
-                        >
-                          {val.Reward}
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+<EmpListDesktop props={val} />
                 </div>
               );
             })}
